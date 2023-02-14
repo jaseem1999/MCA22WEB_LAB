@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <label>password</label> <input type="password" id="pass" name="pass"/>
+        <label>confirm password</label> <input type="password" id="cpass" name="cpass"/>
+        <input type="submit" value="submit"/>
+    </form>
+    <script>
+        function validate(){
+            var pass = document.getElementById("pass").value;
+            var cpass = document.getElementById("cpass").value;
+            if(pass == cpass){
+                alert("Success");
+                return true;
+            }else{
+                alert("password and confirm password must be same");
+                return false;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
